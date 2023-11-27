@@ -16,13 +16,7 @@ public class JpaMain {
         EntityTransaction tran = em.getTransaction();
         tran.begin();
         try {
-            Member findMember = em.find(Member.class,1L);   //
 
-//            findMember.setName("HelloJPA");
-//
-//            em.persist(findMember);
-
-         List<Member> result =  em.createQuery("select m from Member as m ",Member.class).setFirstResult(1).setMaxResults(10).getResultList();
 
 
             tran.commit();
