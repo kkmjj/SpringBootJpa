@@ -13,12 +13,29 @@ public class Order {
     @Column(name = "ORDER_ID")
     private Long id;
 
-    @Column(name = "MEMBER_ID")
-    private Long memberid;
+//    @Column(name = "MEMBER_ID")
+//    private Long memberid;
+    // id를 쓰면 뭔가 객체 지향 스럽지 않다.
+
+
+
+    @ManyToOne
+    @JoinColumn(name = "MEMBER_ID")
+    private Member member;
+
+
     private LocalDateTime orderDate;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
+
+    public Member getMember() {
+        return member;
+    }
+
+    public void setMember(Member member) {
+        this.member = member;
+    }
 
     public Long getId() {
         return id;
@@ -28,13 +45,7 @@ public class Order {
         this.id = id;
     }
 
-    public Long getMemberid() {
-        return memberid;
-    }
 
-    public void setMemberid(Long memberid) {
-        this.memberid = memberid;
-    }
 
     public LocalDateTime getOrderDate() {
         return orderDate;

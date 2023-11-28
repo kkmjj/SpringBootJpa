@@ -14,7 +14,7 @@ public class Member {
     private Long id;
     private String name;
     private String city;
-    private String screet;
+    private String street;
     private String zipcode;
 
     public Long getId() {
@@ -41,12 +41,12 @@ public class Member {
         this.city = city;
     }
 
-    public String getScreet() {
-        return screet;
+    public String getStreet() {
+        return street;
     }
 
-    public void setScreet(String screet) {
-        this.screet = screet;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
     public String getZipcode() {
