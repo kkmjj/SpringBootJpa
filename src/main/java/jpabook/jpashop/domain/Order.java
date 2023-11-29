@@ -35,6 +35,7 @@ public class Order {
 
     public void setMember(Member member) {
         this.member = member;
+        member.getOrders().add(this); // member.getOrders.add(member) 대신 set에서 적용.
     }
 
     public Long getId() {
