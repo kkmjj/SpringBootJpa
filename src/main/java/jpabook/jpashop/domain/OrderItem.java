@@ -12,11 +12,11 @@ public class OrderItem {
     @Column(name = "ORDER_ITEM_ID")
     private Long id;
 
-    @Column(name = "ORDER_ID")
-    private Long orderid;
-
-    @Column(name = "ITEM_ID")
-    private Long itemid;
+//    @Column(name = "ORDER_ID")
+//    private Long orderid;
+//
+//    @Column(name = "ITEM_ID")
+//    private Long itemid;
 
     private int orderPrice;
     private int count;
@@ -55,21 +55,6 @@ public class OrderItem {
         this.id = id;
     }
 
-    public Long getOrderid() {
-        return orderid;
-    }
-
-    public void setOrderid(Long orderid) {
-        this.orderid = orderid;
-    }
-
-    public Long getItemid() {
-        return itemid;
-    }
-
-    public void setItemid(Long itemid) {
-        this.itemid = itemid;
-    }
 
     public int getOrderPrice() {
         return orderPrice;
